@@ -43,6 +43,7 @@ RUN apk --update add \
     php7-ctype \
     zlib \
     php7-zlib \
+    php7-ldap \
     bash \
     --repository http://nl.alpinelinux.org/alpine/edge/community/
 
