@@ -1,4 +1,4 @@
-FROM alpine:edge
+FROM alpine:3.7
 MAINTAINER Nurettin Topal <nurettin@ode.al>
 
 #set timezone => Turkey - Istanbul
@@ -77,6 +77,9 @@ RUN rm -rf /var/www
 RUN mkdir -p /var/www
 WORKDIR /var/www
 COPY src/ /var/www/
+
+RUN rm -rf /var/cache/apk
+RUN rm -rf /root/.composer/cache
 
 EXPOSE 8080
 CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"]
