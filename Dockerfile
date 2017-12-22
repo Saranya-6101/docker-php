@@ -21,6 +21,7 @@ RUN apk --update add \
     nano \
     wget \
     gzip \
+    php7-pcntl \      
     php7-session \
     php7-gd \
     php7-mcrypt \
